@@ -1,7 +1,3 @@
-require "social_snippet/registry_views/version"
-
-module SocialSnippet
-  module RegistryViews
-    # Your code goes here...
-  end
-end
+module SocialSnippet::RegistryViews; end
+require_relative "registry_views/version"
+require_relative "registry_views/common_views"
