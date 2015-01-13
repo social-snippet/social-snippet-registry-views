@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = SocialSnippet::RegistryViews::VERSION
   spec.authors       = ["Hiroyuki Sano"]
   spec.email         = ["sh19910711@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{}
+  spec.description   = %q{}
   spec.homepage      = ""
   spec.license       = "MIT"
 
