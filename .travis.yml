@@ -1,0 +1,21 @@
+language: ruby
+
+rvm:
+  - "2.2"
+
+sudo: false
+
+install: echo install
+
+script: echo script
+
+deploy:
+  provider: heroku
+  api_key:
+    master:
+      secure: "BxWAIgjacx1KjHC56qoFYA4SGR5VpowY3wk+UnlIukjoTZSxEAkhpyA0IrdEEqcrpsyaf5gR1CX017XO3qg3jkApy6S0TESI4PfDtmFCLWWn+PltbisyQAm6b7LQyJOve/9CwRsuYTX9rFz1CiPbKsBObdaBD3iMBvsUK6D4y9U="
+  gem:
+    master: "social_snippet-registry_views"
+  on:
+    repo: social-snippet/social-snippet-registry-views
+
