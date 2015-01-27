@@ -252,7 +252,7 @@ html
         h4 URL
         p <%- url %>
 
-    == yield
+    == yield if block_given?
 
   body
     div#app-root
