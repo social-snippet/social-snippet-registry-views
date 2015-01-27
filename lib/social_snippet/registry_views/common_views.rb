@@ -1,1 +1,1 @@
-class SocialSnippet::Registry < Padrino::Application; end
+class SocialSnippet::RegistryViews::CommonViews < Padrino::Application; end
