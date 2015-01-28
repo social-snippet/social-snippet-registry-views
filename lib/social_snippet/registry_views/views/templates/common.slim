@@ -1,0 +1,80 @@
+//
+// Templates (Common Views)
+//
+
+// site footer
+script#template-footer-view type="text/html"
+  ul.list-unstyled.text-right
+    li.col-sm-4
+      a href="https://social-snippet.github.io"
+        | Social Snippet
+
+    li.col-sm-4
+      a href="http://social-snippet.tumblr.com/"
+        | Blog
+
+    li.col-sm-4
+      a href="https://github.com/social-snippet"
+        | GitHub
+
+    li.col-sm-4
+      a href="https://github.com/social-snippet/social-snippet-registry/issues"
+        | Feedback
+
+// site header
+script#template-header-view type="text/html"
+  div.container-fluid
+    a.navbar-brand href="/"
+      | <%- "SSPM Registry System" %>
+    form.navbar-form.pull-right.hidden-xs action="/search" method="get"
+      div.input-group
+        span.input-group-addon
+          i.glyphicon.glyphicon-search
+        input.form-control.query type="text" name="q" placeholder="Search all repos"
+        span.input-group-btn
+          input.btn.btn-primary.search.pull-right type="submit" value="Go"
+
+// site whole layout
+script#template-app-layout-view type="text/html"
+  header.region
+  div.container-fluid
+    section.region.sidebar-region.col-md-3.col-sm-4
+    section.region.contents-region.col-md-9.col-sm-8
+  footer.region
+
+// site sidebar
+script#template-sidebar-view type="text/html"
+  section.navigation
+    ul.nav
+      li
+        a href="/"
+          i.glyphicon.glyphicon-home
+          |  Home
+
+      li
+        a href="/repos/new"
+          i.glyphicon.glyphicon-plus
+          |  Add
+
+      li
+        a href="/search"
+          i.glyphicon.glyphicon-search
+          |  Search
+
+  section.navigation
+    ul.nav
+      - if is_logged_in
+        li
+          a href="/user/dashboard"
+            i.glyphicon.glyphicon-user
+            |  Dashboard
+
+        li
+          a href="/user/logout"
+            i.glyphicon.glyphicon-off
+            |  Logout
+      - else
+        li
+          a href="/user/login"
+            i.glyphicon.glyphicon-user
+            |  Login

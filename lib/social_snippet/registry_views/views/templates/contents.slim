@@ -1,0 +1,30 @@
+//
+// Templates (Contents)
+//
+
+// home
+script#template-home-view type="text/html"
+  section.region.main-region.col-sm-12.col-md-8
+  section.region.sub-region.col-sm-12.col-md-4
+
+// user repo detail
+script#template-user-repository-detail-view type="text/html"
+  div.panel-heading
+    h4
+      | <%- name %>
+
+  div.panel-body
+    button.btn.btn-primary.action-update
+      span.glyphicon.glyphicon-refresh
+      = " Update"
+    button.btn.btn-danger.action-disable
+      span.glyphicon.glyphicon-stop
+      = " Disable"
+
+// user dashboard
+script#template-user-dashboard-view type="text/html"
+  section.region.repos-region
+
+// user login
+script#template-user-login-view type="text/html"
+  section.region.github-login-region
